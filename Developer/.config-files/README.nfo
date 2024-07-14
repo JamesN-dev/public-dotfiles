@@ -5,7 +5,7 @@ This repository contains some configuration files for my development environment
 Structure
 
 	•	vscode/: Visual Studio Code settings and keybindings.
-	•	oh-my-zsh/: Custom Oh My Zsh settings and aliases.
+	•	oh-my-zsh/: Oh My Zsh aliases.
 
 Update Script
 
