@@ -22,3 +22,4 @@ alias lly="eza -l -g --icons=always --smart-group --total-size --grid --no-quote
 alias llz="eza -l -g --icons=always --smart-group --total-size --absolute=on --header"
 alias goog="google"
 alias yt="youtube"
+alias testalias='echo This is a test alias'
