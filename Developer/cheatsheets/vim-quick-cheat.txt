@@ -1,0 +1,92 @@
+#Vim Cheatsheet:
+
+#Saving and Quitting:
+:w          Save (write) current file
+:q          Quit Vim (only if no changes)
+:wq         Save and quit
+:x          Same as :wq (save and quit)
+:q!         Quit without saving (force quit)
+:help keyword # open help for keyword
+:o file       # open file
+:saveas file  # save file as
+:close        # close current pane
+
+#Page Navigation:
+Ctrl+f      Page down (forward)
+Ctrl+b      Page up (backward)
+Ctrl+u      Scroll half a screen up
+Ctrl+d      Scroll half a screen down
+Ctrl+o      Jump to previous location
+Ctrl+i      Jump to next location
+
+#Navigation:
+h           Move left
+j           Move down
+k           Move up
+l           Move right
+w           Move to beginning of next word
+e           Move to end of current or next word
+b           Move to beginning of current or previous word
+0           Move to beginning of line
+$           Move to end of line
+gg          Move to first line of file
+g_          Jump to the last non-blank character of the line
+G           Move to last line of file
+5G          Go to line 5
+14k         Go up 14 lines
+{           Move to beginning of current or previous paragraph
+}           Move to beginning of next paragraph
+
+#Additional Navigation:
+H           Move cursor to top of screen
+M           Move cursor to middle of screen
+L           Move cursor to bottom of screen
+zz          Center current line on screen
+zt          Top-align current line on screen
+zb          Bottom-align current line on screen
+
+#Editing:
+i           Insert before cursor
+I           Insert at the beginning of the line
+a           Append after cursor
+o           Open new line below current line
+O           Open new line above current line
+x           Delete character under cursor
+dd          Delete current line
+yy          Yank (copy) current line
+p           Paste yanked text after cursor
+.           Repeat last command
+u           Undo last change
+Ctrl+r      Redo last undone change
+
+#Change / Replace
+s          Delete character and substitute text
+S          Delete line and substitute text (same as cc)
+cc         Change (replace) entire line
+cw         Change (replace) to the start of the next word
+ce         Change (replace) to the end of the next word
+cb         Change (replace) to the start of the previous word
+c0         Change (replace) to the start of the line
+c$         Change (replace) to the end of the line
+r          Replace a single character
+
+#Searching / Replacing:
+/pattern    Search for pattern forward
+?pattern    Search for pattern backward
+n           Move to next search result
+N           Move to previous search result
+:%s/old/new/g   Replace all occurrences of 'old' with 'new' in entire file
+:%s/old/new/gc  Replace all old with new throughout file with confirmations
+
+#Formatting Commands
+>           Shift text right
+<           Shift text left
+d           Delete marked text
+~           Switch case
+
+Exiting
+:w               Write (save) the file, but don't exit
+:w !sudo tee %   Write out the current file using sudo
+:wq or :x or ZZ  Write (save) and quit
+:q               Quit (fails if there are unsaved changes)
+:q! or ZQ        Quit and throw away unsaved changes
