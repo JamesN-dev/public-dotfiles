@@ -1,0 +1,33 @@
+#Dotfiles Configuration
+
+This repository contains the configuration files for my development environment.
+
+Structure
+
+	•	vscode/: Visual Studio Code settings and keybindings.
+	•	oh-my-zsh/: Custom Oh My Zsh settings and aliases.
+
+Update Script
+
+To update the configuration files, run the update_configs.sh script:
+
+$HOME/Developer/.config-files/update_configs.sh
+
+Setup on a New Machine
+
+	1.	Clone the repository:
+	
+	git clone --bare git@github.com:JamesN-dev/public-dotfiles.git $HOME/.public-dotfiles
+	alias publicconfig='/usr/bin/git --git-dir=$HOME/.public-dotfiles/ --work-tree=$HOME'
+	publicconfig config --local status.showUntrackedFiles no
+	echo "alias publicconfig='/usr/bin/git --git-dir=$HOME/.public-dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
+	source $HOME/.zshrc
+	publicconfig checkout
+	publicconfig config --local status.showUntrackedFiles no
+	
+	2.	Run the update script:
+		
+	$HOME/Developer/.config-files/update_configs.sh
+		
+		
+		
