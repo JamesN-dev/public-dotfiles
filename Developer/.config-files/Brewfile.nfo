@@ -1,0 +1,36 @@
+###Instructions to update brew file and install on new computer
+	These instructions are tailored for my own personal use. If you intend to use them, please modify accordingly to suit your setup and preferences.
+
+
+##Keeping the Brewfile Updated
+
+#Whenever you install or uninstall Homebrew packages, update the Brewfile to reflect the current state of your system:
+
+	1.	#Generate a new Brewfile:
+		brew bundle dump --file=$HOME/Brewfile
+	
+	2.	#Move the updated Brewfile to your dotfiles directory:
+		mv $HOME/Brewfile $HOME/Developer/.config-files/Brewfile
+		
+	3.	#Add, commit, and push the changes to your dotfiles repository:
+		publicconfig add $HOME/Developer/.config-files/Brewfile
+		publicconfig commit -m "Update Brewfile with latest Homebrew packages"
+		publicconfig push -u origin main
+		
+		
+###Setup on a New Machine
+
+	#Before setting up, ensure there is a /Developer/ directory in $HOME. If not, create one:
+		mkdir -p $HOME/Developer/.config-files
+
+	1.	#Clone Your Public Dotfiles Repository:
+		git clone --bare git@github.com:yourusername/public-dotfiles.git $HOME/.public-dotfiles
+		alias publicconfig='/usr/bin/git --git-dir=$HOME/.public-dotfiles/ --work-tree=$HOME'
+		publicconfig config --local status.showUntrackedFiles no
+		echo "alias publicconfig='/usr/bin/git --git-dir=$HOME/.public-dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
+		source $HOME/.zshrc
+		publicconfig checkout
+		publicconfig config --local status.showUntrackedFiles no
+		
+	2.	#Install Homebrew Packages:
+		brew bundle --file=$HOME/Developer/.config-files/Brewfile
