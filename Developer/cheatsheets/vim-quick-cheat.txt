@@ -11,7 +11,7 @@
 :saveas file  # save file as
 :close        # close current pane
 
-#Other custom keycaps
+#Other custom keymaps
 space -     Decrease number (in nav mode)
 Space +.    Increment number (in nav mode)
 
