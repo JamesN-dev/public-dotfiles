@@ -11,6 +11,10 @@
 :saveas file  # save file as
 :close        # close current pane
 
+#Other custom keycaps
+space -     Decrease number (in nav mode)
+Space +.    Increment number (in nav mode)
+
 #Page Navigation:
 Ctrl+f      Page down (forward)
 Ctrl+b      Page up (backward)
@@ -47,10 +51,11 @@ zb          Bottom-align current line on screen
 
 #Editing:
 i           Insert before cursor
+jk	     exit insert mode(custom keycap)
 I           Insert at the beginning of the line
 a           Append after cursor
-o           Open new line below current line
-O           Open new line above current line
+o           Add new line below current line
+O           Add new line above current line
 x           Delete character under cursor
 dd          Delete current line
 yy          Yank (copy) current line
@@ -73,8 +78,10 @@ r          Replace a single character
 #Searching / Replacing:
 /pattern    Search for pattern forward
 ?pattern    Search for pattern backward
+/pattern+enter Highlight pattern in file
 n           Move to next search result
 N           Move to previous search result
+nh 	    Clear highlights (custom keycap)
 :%s/old/new/g   Replace all occurrences of 'old' with 'new' in entire file
 :%s/old/new/gc  Replace all old with new throughout file with confirmations
 
@@ -90,3 +97,11 @@ Exiting
 :wq or :x or ZZ  Write (save) and quit
 :q               Quit (fails if there are unsaved changes)
 :q! or ZQ        Quit and throw away unsaved changes
+
+
+#Tabs (custom keycaps)
+space to	open new tab
+space tx	close new tab
+space tn	go to next tab
+space tp	go to previous tab
+space tf	move current buffer to new tab
