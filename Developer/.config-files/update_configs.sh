@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# This script will grab my VScode settings and commit them to my public-dotfiles git repository. Simply run the script.
 # Git command with the public dotfiles repository
 git_cmd="/usr/bin/git --git-dir=$HOME/.public-dotfiles/ --work-tree=$HOME"
 
@@ -21,10 +21,7 @@ mkdir -p "$OH_MY_ZSH_DIR"
 # Copy the actual VS Code settings and keybindings files
 cp "$VS_CODE_SETTINGS_SOURCE" "$VSCODE_DIR/settings.json"
 cp "$VS_CODE_KEYBINDINGS_SOURCE" "$VSCODE_DIR/keybindings.json"
-
-# Copy the aliases and macos zsh files
-cp "$ALIASES_SOURCE" "$OH_MY_ZSH_DIR/aliases.zsh"
-cp "$MACOS_SOURCE" "$OH_MY_ZSH_DIR/macos.zsh"
+ 
 
 # Add and commit the files to the public dotfiles repository
 $git_cmd add "$VSCODE_DIR/settings.json"
