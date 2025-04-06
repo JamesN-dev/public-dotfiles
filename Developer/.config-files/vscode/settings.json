@@ -1,15 +1,43 @@
 {
-    "workbench.colorTheme": "Better Solarized Dark Italics",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "terminal.integrated.fontSize": 12,
-    "terminal.external.osxExec": "iTerm.app",
+    "terminal.external.osxExec": "wezterm.app",
     "window.zoomLevel": 0.25,
     "settingsSync.ignoredExtensions": [
         "batisteo.vscode-django",
         "dbaeumer.vscode-eslint"
     ],
     "supermaven.logFilePath": "/Volumes/HDD-Storage/development/SuperMaven/logs",
-
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "explorer.compactFolders": false,
+    "supermaven.enable": {
+        "*": false
+    },
+    "redhat.telemetry.enabled": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.options.statusBarVisibility": "icon",
+    "cmake.showOptionsMovedNotification": false,
+    "makefile.configureOnOpen": true,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "none",
+    "ruff.lineLength": 88,
+    "explorer.confirmDelete": false,
+    "animations.Install-Method": "Apc Customize UI++",
+    "apc.imports": [
+        "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    ],
+    "roo-cline.allowedCommands": [
+        "npm test",
+        "npm install",
+        "tsc",
+        "git log",
+        "git diff",
+        "git show"
+    ],
 }
