@@ -2,7 +2,7 @@
 
 This `--bare` Git repository manages **publicly shareable** configuration files for my personal macOS development environment using the method described at [https://www.atlassian.com/git/tutorials/dotfiles](https://www.atlassian.com/git/tutorials/dotfiles).
 
-**Disclaimer:** These configurations are primarily for my own backup and setup. While intended to be public, review them carefully before use, as they may contain settings specific to my machine. Use at your own risk.
+**Disclaimer:** These configurations are primarily for my own backup and setup on a apple silicone mac machine. While intended to be public, review them carefully before use, as they may contain settings specific to my machine. Use at your own risk.
 
 *(Private configurations are managed in a separate repository accessed via a `config` alias).*
 
