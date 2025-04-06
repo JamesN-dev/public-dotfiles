@@ -1,4 +1,4 @@
-# My macOS Dotfiles Configuration (Public)
+# My Dotfiles Configuration (Public)
 
 This `--bare` Git repository manages **publicly shareable** configuration files for my personal macOS development environment using the method described at [https://www.atlassian.com/git/tutorials/dotfiles](https://www.atlassian.com/git/tutorials/dotfiles).
 
