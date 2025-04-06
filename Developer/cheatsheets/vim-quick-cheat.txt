@@ -15,6 +15,13 @@
 space -     Decrease number (in nav mode)
 Space +.    Increment number (in nav mode)
 
+#File Navigation
+lead:ee     Open file tree
+lead:ef     Close file tree
+lead:ec     Collapse file
+lead:er     Reload file tree
+
+
 #Page Navigation:
 Ctrl+f      Page down (forward)
 Ctrl+b      Page up (backward)
@@ -81,7 +88,7 @@ r          Replace a single character
 /pattern+enter Highlight pattern in file
 n           Move to next search result
 N           Move to previous search result
-nh 	    Clear highlights (custom keycap)
+lead:nh     Clear highlights (custom keycap)
 :%s/old/new/g   Replace all occurrences of 'old' with 'new' in entire file
 :%s/old/new/gc  Replace all old with new throughout file with confirmations
 
@@ -98,6 +105,16 @@ Exiting
 :q               Quit (fails if there are unsaved changes)
 :q! or ZQ        Quit and throw away unsaved changes
 
+#Split pane and tabs
+lead:sv    Tmux split pane.
+Lead:sh.   Tmux create another pane
+Cntrl+h,j,k,l  Navigate between panes.
+
+:Vexplore   Opens Netrw in a vertical pane
+t	    open a file in a new tab
+gt.         Switch to tab
+gT          Switch back to first tab
+
 
 #Tabs (custom keycaps)
 space to	open new tab
@@ -105,3 +122,4 @@ space tx	close new tab
 space tn	go to next tab
 space tp	go to previous tab
 space tf	move current buffer to new tab
+ 

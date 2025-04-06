@@ -1,0 +1,71 @@
+# === Commit Instructions ===
+
+# --- PUBLIC Repository (publicconfig) ---
+
+# Target: git@github.com:JamesN-dev/public-dotfiles.git
+# Manages: Public configs (VSCode, Zsh custom, Brewfile via Developer/, README, p10k, Cheatsheets etc.)
+
+# A. To update files managed by the script (VSCode, Zsh custom):
+#    1. Make changes to live files (e.g., in ~/Library/..., ~/.oh-my-zsh/custom/).
+#    2. Run the update script:
+update_configs.sh
+#    3. Commit the staged changes (script only stages, doesn't commit):
+publicconfig commit -m "Update config files via script (VSCode, Zsh Custom)"
+#    4. Push:
+publicconfig push
+
+# B. To update the Brewfile:
+#    1. Dump current list:
+brew bundle dump --force --file=$HOME/Brewfile.current
+#    2. Overwrite tracked Brewfile:
+mv "$HOME/Brewfile.current" "$HOME/Developer/.config-files/Brewfile"
+#    3. Stage the change:
+publicconfig add "$HOME/Developer/.config-files/Brewfile"
+#    4. Commit:
+publicconfig commit -m "Update Brewfile"
+#    5. Push:
+publicconfig push
+
+# C. To update files tracked directly (README.md, .p10k.zsh, Cheatsheets):
+#    1. Edit the file(s) (e.g., $HOME/README.md, $HOME/.p10k.zsh, files in $HOME/Developer/cheatsheets/).
+#    2. Stage ALL changes in the specific file or folder:
+publicconfig add "$HOME/README.md"
+# OR
+publicconfig add "$HOME/.p10k.zsh"
+# OR (for the whole cheatsheets folder)
+publicconfig add "$HOME/Developer/cheatsheets/"
+#    3. Commit:
+publicconfig commit -m "Update <specific file/folder name>"
+#    4. Push:
+publicconfig push
+
+# D. Generic Add/Commit/Push for NEW files/folders:
+#    1. Stage the new item:
+publicconfig add <path/to/new/item>
+#    2. Commit:
+publicconfig commit -m "Add <new item description>"
+#    3. Push:
+publicconfig push
+
+# --- PRIVATE Repository (config) ---
+
+# Target: [Your private repo URL]
+# Manages: Private configs (.zshrc, API keys, work files, etc.)
+
+# A. To update .zshrc:
+#    1. Edit $HOME/.zshrc
+#    2. Stage:
+config add "$HOME/.zshrc"
+#    3. Commit:
+config commit -m "Update .zshrc"
+#    4. Push:
+config push
+
+# B. Generic Add/Commit/Push for other private files:
+#    1. Edit/Create file (e.g. $HOME/.private_keys)
+#    2. Stage:
+config add <path/to/private/file>
+#    3. Commit:
+config commit -m "Update <private file description>"
+#    4. Push:
+config push

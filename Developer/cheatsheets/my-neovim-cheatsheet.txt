@@ -1,0 +1,21 @@
+##My Neovim Config Cheatsheet
+
+:w			Save
+:q			Quit
+:wq			Save & Quit
+:q!			Force Quit
+
+yap			Yank a paragraph
+p	 		Paste
+
+
+
+##Navigation
+--Split Screen
+ctrl+w+v 		Right Split
+ctrl+w+s		Bottom Split 
+--Window focus
+<Ctrl-w><Ctrl-h>	move focus to left window
+<Ctrl-w><Ctrl-l>	move focus to right window
+<Ctrl-w><Ctrl-j>	move focus to lower window
+<Ctrl-w><Ctrl-k>	move focus to upper window
