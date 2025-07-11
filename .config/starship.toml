@@ -1,0 +1,61 @@
+# Minimal with Powerline Elements - Night Theme
+
+add_newline = false
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$bun\
+$nodejs\
+$character"""
+
+right_format = """$cmd_duration"""
+
+[directory]
+style = "bg:#0d1117 fg:#c9d1d9 bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "fg:#eab308"                # amber/yellow-brown
+format = '[🌱 $branch ]($style)'
+symbol = ""                         # leave empty, since emoji is in format
+
+[git_status]
+style = "bg:#21262d fg:#c9d1d9"
+format = '[$staged$modified$renamed$deleted$untracked$stashed$ahead_behind ]($style)'
+ahead = '⇡${count}'
+behind = '⇣${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+up_to_date = ''
+untracked = '[$count](fg:#fbbf24)'      # yellow for untracked
+stashed = '[$count](fg:#7c3aed)'       # purple for stashed
+modified = '[$count](fg:#ef4444)'      # red for modified
+staged = '[$count](fg:#22c55e)'        # green for staged
+renamed = '[$count](fg:#eab308)'       # amber for renamed
+deleted = '[$count](fg:#f87171)'       # light red for deleted
+
+[python]
+style = "bg:#1f2937 fg:#fbbf24"
+format = '[ py $version ]($style)'
+detect_files = ['requirements.txt', 'pyproject.toml', 'Pipfile', 'manage.py']
+
+[bun]
+style = "bg:#374151 fg:#f59e0b"
+format = '[ bun $version ]($style)'
+
+[nodejs]
+style = "bg:#4b5563 fg:#10b981"
+format = '[ node $version ]($style)'
+
+[character]
+success_symbol = '[▶](bold purple)'
+error_symbol = '[▶](bold red)'
+
+[cmd_duration]
+style = "bold purple"
+format = '[$duration]($style)'
+min_time = 2000
